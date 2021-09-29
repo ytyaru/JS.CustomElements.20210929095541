@@ -11,7 +11,6 @@ export default class ReadingTime extends HTMLElement {
         let str = target.textContent
         if (this._isWithoutWhiteSpace == true) { str = str.replace(/\s+/g, ""); }
         let time = ~~(str.length / 400);
-        console.log(time, str)
         return (time < 1) ? 1 : time;
     }
     static get observedAttributes() { return ['selector', 'unit', 'space']; }
