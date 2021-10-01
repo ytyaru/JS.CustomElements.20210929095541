@@ -12,7 +12,7 @@ export default class CharacterCounter extends HTMLElement {
         if (!this._withWhiteSpace) { str = str.replace(/\s+/g, ""); console.log(`${str.length} this._withWhiteSpace=${this._withWhiteSpace}`); }
         return str.length;
     }
-    static get observedAttributes() { return ['selector', 'unit', 'space', 'time']; }
+    static get observedAttributes() { return ['selector', 'unit', 'space']; }
     attributeChangedCallback(name, oldValue, newValue) {
         if ("selector" == name) {
             this._selector = newValue;
